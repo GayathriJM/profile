@@ -79,7 +79,7 @@ header{
 
 header .name{
     color:#F0A500;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bolder;
 }
 
@@ -133,19 +133,33 @@ header .follow a:hover{
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    padding: 0 5rem;
 }
 
-.home .image{
-    flex: 1 1 40rem;
+.profile-img{
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s;
 }
 
-.home .image img{
-        width: 140px;
-        object-position: left;
-        height: 150px;
-        margin: auto;
-        border-radius: 100%;
-        border: 2px solid whitesmoke ;
+.image{
+    text-align: right;
+    position: relative;
+}
+
+.back-img{
+    position: absolute;
+    width: 80%;
+    max-width: 450px;
+    top: -12px;
+    right: 15px;
+}
+
+.profile-img:hover{
+    transform: translate(-25px, -25px);
+    cursor: pointer;
 }
 
 .home .content{
@@ -153,12 +167,12 @@ header .follow a:hover{
 }
 
 .home .content .hi{
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--main-color);
 }
 
 .home .content h3{
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     text-transform: uppercase;
 }
@@ -175,10 +189,23 @@ header .follow a:hover{
 }
 
 .home .content .text{
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: whitesmoke;
     padding: .5rem 0;
+    text-decoration: none;
 }
+
+.home .content .text span{
+    color: var(--main-color);
+    border-radius: 55%;
+}
+
+.home .content .text a:hover{
+    background: white;
+    border-radius: 2.6rem;
+}
+
+
 
 .about .row-1{
     display: flex;
@@ -193,7 +220,7 @@ header .follow a:hover{
 
 .about .row-1 .content h3{
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
 
 .about .row-1 .content p{
@@ -262,11 +289,7 @@ header .follow a:hover{
     width: 50%;
 }
 .about .row-2 .skills .progress:nth-child(3) .bar span{
-    width: 55%;
-}
-.about .row-2 .skills .progress:nth-child(4) .bar span{
-    width: 50%;
-
+    width: 70%;
 }
 
 .education .box-container{
@@ -404,7 +427,7 @@ header .follow a:hover{
     font-size: 2rem;
     background: var(--main-color);
     color: #fff;
-    border-radius: 55%;
+    border-radius: 10%;
 }
 
 .contact .icons-container .icons h3{
